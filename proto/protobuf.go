@@ -12,7 +12,7 @@ func main() {
 	fmt.Println()
 	
 	// V1 Writer schreibt Daten
-	oldData := &pb.PersonV1{
+	oldData := &pb.AmessageV1{
 		Message: "Anybody there?",
 		Code:    5,
 	}
@@ -24,7 +24,7 @@ func main() {
 	fmt.Printf("V1 Writer: Serialisiert %d bytes\n", len(binary))
 	
 	// V2 Reader liest mit neuem Schema
-	var resultV2 pb.PersonV2
+	var resultV2 pb.AmessageV2
 	err = proto.Unmarshal(binary, &resultV2)
 	if err != nil {
 		panic(err)
@@ -37,7 +37,7 @@ func main() {
 	fmt.Println()
 	
 	// V2 Writer schreibt Daten
-	newData := &pb.PersonV2{
+	newData := &pb.AmessageV2{
 		Message:   "Hello from V2",
 		Code:      42,
 		Timestamp: 1700000000,
@@ -50,7 +50,7 @@ func main() {
 	fmt.Printf("V2 Writer: Serialisiert %d bytes\n", len(binaryV2))
 	
 	// V1 Reader liest nur bekannte Felder
-	var resultV1 pb.PersonV1
+	var resultV1 pb.AmessageV1
 	err = proto.Unmarshal(binaryV2, &resultV1)
 	if err != nil {
 		panic(err)

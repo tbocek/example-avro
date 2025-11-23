@@ -2,7 +2,7 @@ syntax = "proto3";
 
 option go_package = "./pb";
 
-message PersonV2 {
+message AmessageV2 {
   string message = 1;
   int32 code = 2;
   int64 timestamp = 3;

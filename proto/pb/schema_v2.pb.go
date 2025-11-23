@@ -21,7 +21,7 @@ const (
 	_ = protoimpl.EnforceVersion(protoimpl.MaxVersion - 20)
 )
 
-type PersonV2 struct {
+type AmessageV2 struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	Message       string                 `protobuf:"bytes,1,opt,name=message,proto3" json:"message,omitempty"`
 	Code          int32                  `protobuf:"varint,2,opt,name=code,proto3" json:"code,omitempty"`
@@ -30,20 +30,20 @@ type PersonV2 struct {
 	sizeCache     protoimpl.SizeCache
 }
 
-func (x *PersonV2) Reset() {
-	*x = PersonV2{}
+func (x *AmessageV2) Reset() {
+	*x = AmessageV2{}
 	mi := &file_schema_v2_proto_msgTypes[0]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
 
-func (x *PersonV2) String() string {
+func (x *AmessageV2) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*PersonV2) ProtoMessage() {}
+func (*AmessageV2) ProtoMessage() {}
 
-func (x *PersonV2) ProtoReflect() protoreflect.Message {
+func (x *AmessageV2) ProtoReflect() protoreflect.Message {
 	mi := &file_schema_v2_proto_msgTypes[0]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -55,26 +55,26 @@ func (x *PersonV2) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use PersonV2.ProtoReflect.Descriptor instead.
-func (*PersonV2) Descriptor() ([]byte, []int) {
+// Deprecated: Use AmessageV2.ProtoReflect.Descriptor instead.
+func (*AmessageV2) Descriptor() ([]byte, []int) {
 	return file_schema_v2_proto_rawDescGZIP(), []int{0}
 }
 
-func (x *PersonV2) GetMessage() string {
+func (x *AmessageV2) GetMessage() string {
 	if x != nil {
 		return x.Message
 	}
 	return ""
 }
 
-func (x *PersonV2) GetCode() int32 {
+func (x *AmessageV2) GetCode() int32 {
 	if x != nil {
 		return x.Code
 	}
 	return 0
 }
 
-func (x *PersonV2) GetTimestamp() int64 {
+func (x *AmessageV2) GetTimestamp() int64 {
 	if x != nil {
 		return x.Timestamp
 	}
@@ -85,8 +85,9 @@ var File_schema_v2_proto protoreflect.FileDescriptor
 
 const file_schema_v2_proto_rawDesc = "" +
 	"\n" +
-	"\x0fschema_v2.proto\"V\n" +
-	"\bPersonV2\x12\x18\n" +
+	"\x0fschema_v2.proto\"X\n" +
+	"\n" +
+	"AmessageV2\x12\x18\n" +
 	"\amessage\x18\x01 \x01(\tR\amessage\x12\x12\n" +
 	"\x04code\x18\x02 \x01(\x05R\x04code\x12\x1c\n" +
 	"\ttimestamp\x18\x03 \x01(\x03R\ttimestampB\x06Z\x04./pbb\x06proto3"
@@ -105,7 +106,7 @@ func file_schema_v2_proto_rawDescGZIP() []byte {
 
 var file_schema_v2_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_schema_v2_proto_goTypes = []any{
-	(*PersonV2)(nil), // 0: PersonV2
+	(*AmessageV2)(nil), // 0: AmessageV2
 }
 var file_schema_v2_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for method output_type
