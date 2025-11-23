@@ -1,4 +1,4 @@
-module github.com/tbocek/example-avro
+module github.com/tbocek/example-avro/avro
 
 go 1.25
 

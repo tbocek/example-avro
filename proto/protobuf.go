@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	
-	pb "github.com/tbocek/example-avro/pb"
+	pb "github.com/tbocek/example-avro/proto/pb"
 	"google.golang.org/protobuf/proto"
 )
 
