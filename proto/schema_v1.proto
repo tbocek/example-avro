@@ -1,0 +1,8 @@
+syntax = "proto3";  // ← WICHTIG!
+
+option go_package = "./pb";
+
+message PersonV1 {
+  string message = 1;
+  int32 code = 2;
+}
